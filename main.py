@@ -12,7 +12,6 @@ jaljella = []
 def piirra_kentta():
     haravasto.tyhjaa_ikkuna()
     haravasto.piirra_tausta()
-    #haravasto.piirra_tekstia
     haravasto.aloita_ruutujen_piirto()
     for y, sisalto in enumerate(tila["kentta"]):
         for x, sis in enumerate(sisalto):
@@ -21,18 +20,9 @@ def piirra_kentta():
     haravasto.piirra_ruudut()
 
 def paivita_kentta():
-    #haravasto.tyhjaa_ikkuna()
-    #haravasto.piirra_tausta()
     haravasto.aloita_ruutujen_piirto()
     if tila["kentta"][kasittele_hiiri.ykoord][kasittele_hiiri.xkoord] == " ":tila["kentta"][kasittele_hiiri.ykoord][kasittele_hiiri.xkoord] = "0"
     haravasto.lisaa_piirrettava_ruutu(tila["kentta"][kasittele_hiiri.ykoord][kasittele_hiiri.xkoord], kasittele_hiiri.xkoord * 40, kasittele_hiiri.ykoord * 40)
-    #y, sisalto = enumerate(tila["kentta"])
-    #x, sis = enumerate(sisalto)
-    #haravasto.lisaa_piirrettava_ruutu(sis,x * 40, y * 40)
-    #for y, sisalto in enumerate(tila["kentta"]):
-    #    for x, sis in enumerate(sisalto):
-    #            #if sis == " ":sis = "0"
-    #            haravasto.lisaa_piirrettava_ruutu(sis, x * 40, y * 40)
     haravasto.piirra_ruudut()
     if tila["kentta"][kasittele_hiiri.ykoord][kasittele_hiiri.xkoord] == "x":haravasto.piirra_tekstia("Hävisit!", 0, 0)
 
@@ -60,11 +50,7 @@ def kasittele_hiiri(x, y, nappi, muokkausnappain):
         painettu_nappi = "vasen"
     kasittele_hiiri.xkoord = int(x / 40)
     kasittele_hiiri.ykoord = int(y / 40)
-    #if tila["kentta"][ykoord][xkoord] == " ":tila["kentta"][ykoord][xkoord] = "0"
-    #if tila["kentta"][ykoord][xkoord] == "x":tila["kentta"][ykoord][xkoord] = "x"
-    #if tila["kentta"][ykoord][xkoord] == " "
     main2()
-    #print("Hiiren nappia {} painettiin ruudussa {}, {}".format(painettu_nappi, int(x / 40) + 1, int(y / 40) +1 ))
 
 def kasittele_nappain(nappain, muokkausnappain):
         if nappain == key.ESCAPE:haravasto.lopeta()
