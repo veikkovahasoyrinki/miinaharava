@@ -34,7 +34,7 @@ def paivita_kentta():
     #            #if sis == " ":sis = "0"
     #            haravasto.lisaa_piirrettava_ruutu(sis, x * 40, y * 40)
     haravasto.piirra_ruudut()
-    if tila["kentta"][kasittele_hiiri.ykoord][kasittele_hiiri.xkoord] == "x":haravasto.piirra_tekstia("Hävisit homo!", 0, 0)
+    if tila["kentta"][kasittele_hiiri.ykoord][kasittele_hiiri.xkoord] == "x":haravasto.piirra_tekstia("Hävisit!", 0, 0)
 
 
 def main2():
